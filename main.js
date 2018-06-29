@@ -1,41 +1,75 @@
-var b = "BASIC";
-var a = "ADVANCED";
+var first_n = 0;
+var second_n = 0;
+var add_n;
+var sub_n;
+var multi_n;
+var div_n;
+var pow_n;
+var sqr_n;
+var answer_cal;
+var answer_funct;
 
-answer = prompt("What Calculator Would You Like To Use: (A) = ADVANCED OR (B)= BASIC");
-String(answer);
 
-if (answer.toUpperCase() == "A")
+answer_cal = prompt("What Calculator Would You Like To Use: (A) = ADVANCED (B)= BASIC");
+String(answer_cal);
+
+if (answer_cal.toUpperCase() == "A")
 {
 alert("<Selected> ADVANCED Calculator");
-answer = prompt("What Function Would You Like To Perform: ADD(+) SUB(-) MULTI(*) DIV(/) ");
+answer_funct = prompt("What Function Would You Like To Perform: POW(Num^N) SQR(SQUARE ROOT) ");
 
-if (answer == "ADD" || "+")
+}
+
+else if (answer_cal.toUpperCase() == "B")
+{
+alert("<Selected> BASIC Calculator");
+answer_funct = prompt("What Function Would You Like To Perform: ADD(+) SUB(-) MULTI(*) DIV(/) ");
+
+if (answer_funct.toUpperCase() == "ADD" || "+")
 {
   alert("<Selected> ADDITION")
   first_n = prompt("What Is Your First Number: ");
   second_n = prompt("What Is Your Second Number: ");
-  add_n = first_n + second_n;
-  alert("<ADDITION> ", first_n + " + " + second_n, " = ", add_n);
-  answer = prompt("Would You Like To Go Back To The (Menu): Yes OR No");
-if (answer.toUpperCase() == "YES"){answer = prompt("What Function Would You Like To Perform: ADD(+) SUB(-) MULTI(*) DIV(/) ");}
-else if (answer.toUpperCase() == "NO")
+  add_n = Number(first_n) + Number(second_n);
+  alert(first_n + " + " + second_n + " = " + add_n);
+}
+else if (answer_funct.toUpperCase() == "SUB" || "-")
 {
+  alert("<Selected> SUBTRACTION")
   first_n = prompt("What Is Your First Number: ");
   second_n = prompt("What Is Your Second Number: ");
-  add_n = first_n + second_n;
-  alert("<ADDITION> ", first_n + " + " + second_n, " = ", add_n);
-  answer = prompt("Would You Like To Go Back To The (Menu): Yes OR No");
- }
-
+  sub_n = Number(first_n) - Number(second_n);
+  alert(first_n + " - " + second_n + " = " + sub_n);
 }
 
-}
-else if (answer.toUpperCase() == "B")
+else if (answer_funct.toUpperCase() == "MULTI" || "*")
 {
-alert("BASIC Calculator <Selected>");
+  alert("<Selected> MULTIPLICATION")
+  first_n = prompt("What Is Your First Number: ");
+  second_n = prompt("What Is Your Second Number: ");
+  multi_n = Number(first_n) * Number(second_n);
+  alert(first_n + " x " + second_n + " = " + multi_n);
 }
+
+else if (answer_funct.toUpperCase() == "DIV" || "/")
+{
+  alert("<Selected> DIVISION")
+  first_n = prompt("What Is Your First Number: ");
+  second_n = prompt("What Is Your Second Number: ");
+  div_n = Number(first_n) / Number(second_n);
+  alert(first_n + " / " + second_n + " = " + div_n);
+}
+
 else
 {
-alert("Please Select (A) = ADVANCED OR (B)= BASIC");
-answer = prompt("What Calculator Would You Like To Use: (A) = ADVANCED OR (B)= BASIC");
+  alert("<ERROR> Please Enter The Correct Value");
+  answer_funct = prompt("What Function Would You Like To Perform: ADD(+) SUB(-) MULTI(*) DIV(/) ");
+}
+
+}
+
+else
+{
+alert("<ERROR> Please Enter The Correct Value");
+answer = prompt("What Calculator Would You Like To Use: (A) = ADVANCED (B)= BASIC");
 }
