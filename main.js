@@ -11,14 +11,13 @@ var sqr_n;
 var answer_cal;
 var answer_funct;
 
-
-answer_cal = prompt("What Calculator Would You Like To Use: (A) = ADVANCED (B)= BASIC");
-String(answer_cal);
+  answer_cal = prompt("What Calculator Would You Like To Use: (A) = ADVANCED (B)= BASIC");
+  String(answer_cal);
 
 if (answer_cal.toUpperCase() == "A")
 {
 alert("<Selected> ADVANCED Calculator");
-answer_funct = prompt("What Function Would You Like To Perform: POW(Num^N) SQR(SQUARE ROOT) ");
+answer_funct = prompt("What Function Would You Like To Perform: POW(Num^N) SQRT(SQUARE ROOT) ");
 
 if (answer_funct.toUpperCase() == "POW")
 {
@@ -39,6 +38,7 @@ else if (answer_funct.toUpperCase() == "SQRT")
 else
 {
   alert("<ERROR> Please Enter The Correct Value");
+  answer_funct = prompt("What Function Would You Like To Perform: POW(Num^N) SQR(SQUARE ROOT) ");
 }
 }
 
@@ -85,6 +85,7 @@ else if (answer_funct.toUpperCase() == "DIV" || "/")
 else
 {
   alert("<ERROR> Please Enter The Correct Value");
+  answer_funct = prompt("What Function Would You Like To Perform: ADD(+) SUB(-) MULTI(*) DIV(/) ");
 }
 
 }
@@ -92,4 +93,6 @@ else
 else
 {
 alert("<ERROR> Please Enter The Correct Value");
+answer_cal = prompt("What Calculator Would You Like To Use: (A) = ADVANCED (B)= BASIC");
+
 }
