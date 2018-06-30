@@ -1,5 +1,7 @@
 var first_n = 0;
+var firstP_n;
 var second_n = 0;
+var secondP_n;
 var add_n;
 var sub_n;
 var multi_n;
@@ -18,6 +20,26 @@ if (answer_cal.toUpperCase() == "A")
 alert("<Selected> ADVANCED Calculator");
 answer_funct = prompt("What Function Would You Like To Perform: POW(Num^N) SQR(SQUARE ROOT) ");
 
+if (answer_funct.toUpperCase() == "POW")
+{
+  alert("<Selected> n to the POWER")
+  firstP_n = prompt("What Is Your First Number: ");
+  secondP_n = prompt("What Is Your Second Number: ");
+  numPow_n = Math.pow(Number(firstP_n),Number(secondP_n));
+  alert(firstP_n + " ^" + secondP_n + " = " + numPow_n);
+}
+else if (answer_funct.toUpperCase() == "SQRT")
+{
+  alert("<Selected> SQUARE ROOT")
+  firstSQ_n = prompt("What Is Your First Number: ");
+  numSQ_n = Math.sqrt(Number(firstSQ_n));
+  alert(firstSQ_n + " SQUARE ROOT "+ " = " + numSQ_n);
+}
+
+else
+{
+  alert("<ERROR> Please Enter The Correct Value");
+}
 }
 
 else if (answer_cal.toUpperCase() == "B")
@@ -63,7 +85,6 @@ else if (answer_funct.toUpperCase() == "DIV" || "/")
 else
 {
   alert("<ERROR> Please Enter The Correct Value");
-  answer_funct = prompt("What Function Would You Like To Perform: ADD(+) SUB(-) MULTI(*) DIV(/) ");
 }
 
 }
@@ -71,5 +92,4 @@ else
 else
 {
 alert("<ERROR> Please Enter The Correct Value");
-answer = prompt("What Calculator Would You Like To Use: (A) = ADVANCED (B)= BASIC");
 }
