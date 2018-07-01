@@ -8,8 +8,14 @@ var multi_n;
 var div_n;
 var pow_n;
 var sqr_n;
+var numPow_n;
+var numSQ_n;
+var weight_b;
+var height_b;
+var result_b;
 var answer_cal;
 var answer_funct;
+var answer_Bmi;
 
   answer_cal = prompt("What Calculator Would You Like To Use: (A) = ADVANCED (B)= BASIC");
   String(answer_cal);
@@ -33,6 +39,36 @@ else if (answer_funct.toUpperCase() == "SQRT")
   firstSQ_n = prompt("What Is Your First Number: ");
   numSQ_n = Math.sqrt(Number(firstSQ_n));
   alert(firstSQ_n + " SQUARE ROOT "+ " = " + numSQ_n);
+
+else if answer_funct.toUpperCase() == "BMI"
+{
+  alert("<Selected> BMI");
+  answer_Bmi = prompt("What Version Would You Like: IMP-(Imperial) MET-(Metric)  ");
+if answer_Bmi.toUpperCase() == "IMP"
+{
+  alert("<Selected> BMI Imperial");
+  weight_b = prompt("What Is Your Weight(lb): ");
+  height_b = prompt("What Is Your Height(INCH) Ensure Answer is Decimal: ");
+  while (height_b % 1 != 0) {
+      height_b = prompt("What Is Your Height(INCH) Ensure Answer is Decimal: ");
+  }
+  result_b = (Number(weight_b)/(Number(height_b)*Number(height_b))) * 703;
+}
+
+else if answer_Bmi.toUpperCase() == "MET"
+{
+  alert("<Selected> BMI Metric")
+  weight_b = prompt("What Is Your Weight(kg): ");
+  height_b = prompt("What Is Your Height(M): ");
+  result_b = (Number(weight_b)/(Number(height_b)*Number(height_b)));
+  alert("Your BMI(Metric) Is: "+ result_b);
+}
+
+else
+{
+alert("<ERROR> Please Enter The Correct Value");
+}
+
 }
 
 else

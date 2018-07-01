@@ -1,27 +1,4 @@
-<!-- Your task is to write a command line calculator application that has two settings, (b)asic and (a)dvanced.
-- First you will need to ask the user for which calculator they want to use
-- Then you will need to ask the user for the numbers to operate on.
-- Then you need to work out what to do with the numbers, depending on what operation they choose.
 
-Basic:
-- Additon
-- Multiplication
-- Division
-- Subtraction
-
-Advanced:
-- Power
-- Square root
-
-Setup
-There is no starter code for this app.
-
-Hints
-Get user input - var hello = prompt("What is your name")
-Output to console - console.log(hello)
-
-Bonus task - Add some additional functionality
-Add the following calculator feature into your app.
 
 BMI Calculator
 Calculate the BMI when given the height and weight - the user should be able to choose between the imperial and the metric system
