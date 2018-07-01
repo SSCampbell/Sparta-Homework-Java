@@ -1,3 +1,4 @@
+
 var first_n = 0;
 var firstP_n;
 var second_n = 0;
@@ -13,18 +14,17 @@ var numSQ_n;
 var weight_b;
 var height_b;
 var result_b;
-var answer_cal;
+var answer_cal = 0;
 var answer_funct;
 var answer_Bmi;
-console.log("TEst");
+
 answer_cal = prompt("What Calculator Would You Like To Use: (A) = ADVANCED (B)= BASIC");
 String(answer_cal);
 
 if (answer_cal.toUpperCase() == "A")
 {
   alert("<Selected> ADVANCED Calculator");
-  answer_funct = prompt("What Function Would You Like To Perform: POW(Num^N) SQRT(SQUARE ROOT) ");
-
+  answer_funct = prompt("What Function Would You Like To Perform: POW(Num^N) SQRT(SQUARE ROOT) BMI ");
   if (answer_funct.toUpperCase() == "POW")
   {
     alert("<Selected> n to the POWER");
@@ -49,10 +49,11 @@ if (answer_cal.toUpperCase() == "A")
     {
       alert("<Selected> BMI Imperial");
       weight_b = prompt("What Is Your Weight(lb): ");
+      //80lb -> 36kilo
       height_b = prompt("What Is Your Height(INCH) Ensure Answer is Decimal: ");
-      while (height_b % 1 != 0) {
-      height_b = prompt("What Is Your Height(INCH) Ensure Answer is Decimal: ");}
+
       result_b = (Number(weight_b)/(Number(height_b)*Number(height_b))) * 703;
+      alert("Your BMI(metric) Is: "+ result_b);
     }
 
     else if (answer_Bmi.toUpperCase() == "MET")
@@ -82,7 +83,7 @@ else if (answer_cal.toUpperCase() == "B")
   alert("<Selected> BASIC Calculator");
   answer_funct = prompt("What Function Would You Like To Perform: ADD(+) SUB(-) MULTI(*) DIV(/) ");
 
-  if (answer_funct.toUpperCase() == "ADD" || "+")
+  if (answer_funct.toUpperCase() == "ADD" || answer_cal == "+")
   {
     alert("<Selected> ADDITION")
     first_n = prompt("What Is Your First Number: ");
@@ -90,7 +91,7 @@ else if (answer_cal.toUpperCase() == "B")
     add_n = Number(first_n) + Number(second_n);
     alert(first_n + " + " + second_n + " = " + add_n);
   }
-  else if (answer_funct.toUpperCase() == "SUB" || "-")
+  else if (answer_funct.toUpperCase() == "SUB" || answer_cal == "-")
   {
     alert("<Selected> SUBTRACTION")
     first_n = prompt("What Is Your First Number: ");
@@ -99,7 +100,7 @@ else if (answer_cal.toUpperCase() == "B")
     alert(first_n + " - " + second_n + " = " + sub_n);
   }
 
-  else if (answer_funct.toUpperCase() == "MULTI" || "*")
+  else if (answer_funct.toUpperCase() == "MULTI" || answer_cal == "*")
   {
     alert("<Selected> MULTIPLICATION")
     first_n = prompt("What Is Your First Number: ");
@@ -108,7 +109,7 @@ else if (answer_cal.toUpperCase() == "B")
     alert(first_n + " x " + second_n + " = " + multi_n);
   }
 
-  else if (answer_funct.toUpperCase() == "DIV" || "/")
+  else if (answer_funct.toUpperCase() == "DIV" || answer_cal == "/")
   {
     alert("<Selected> DIVISION")
     first_n = prompt("What Is Your First Number: ");
@@ -121,6 +122,7 @@ else if (answer_cal.toUpperCase() == "B")
   {
     alert("<ERROR> Please Enter The Correct Value");
     answer_funct = prompt("What Function Would You Like To Perform: ADD(+) SUB(-) MULTI(*) DIV(/) ");
+
   }
 }
 
@@ -128,4 +130,5 @@ else
 {
   alert("<ERROR> Please Enter The Correct Value");
   answer_cal = prompt("What Calculator Would You Like To Use: (A) = ADVANCED (B)= BASIC");
+    String(answer_cal);
 }
