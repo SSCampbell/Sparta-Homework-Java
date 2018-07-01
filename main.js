@@ -61,7 +61,7 @@ else if answer_Bmi.toUpperCase() == "MET"
   weight_b = prompt("What Is Your Weight(kg): ");
   height_b = prompt("What Is Your Height(M): ");
   result_b = (Number(weight_b)/(Number(height_b)*Number(height_b)));
-  alert("Your BMI(Metric) Is: "+ result_b);
+  alert("Your BMI(metric) Is: "+ result_b);
 }
 
 else
