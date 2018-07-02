@@ -1,4 +1,4 @@
-# Sparta Global Academy Homework - JavaScript Calculator
+# Sparta Global Academy Homework -- JavaScript Calculator
 
 ## Project Review:
 
