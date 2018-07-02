@@ -3,17 +3,9 @@ var first_n = 0;
 var firstP_n;
 var second_n = 0;
 var secondP_n;
-var add_n;
-var sub_n;
-var multi_n;
-var div_n;
-var pow_n;
-var sqr_n;
-var numPow_n;
-var numSQ_n;
+var result;
 var weight_b;
 var height_b;
-var result_b;
 var answer_cal = 0;
 var answer_funct;
 var answer_Bmi;
@@ -30,15 +22,15 @@ if (answer_cal.toUpperCase() == "A")
     alert("<Selected> n to the POWER");
     firstP_n = prompt("What Is Your First Number: ");
     secondP_n = prompt("What Is Your Second Number: ");
-    numPow_n = Math.pow(Number(firstP_n),Number(secondP_n));
-    alert(firstP_n + " ^" + secondP_n + " = " + numPow_n);
+    result = Math.pow(Number(firstP_n),Number(secondP_n));
+    alert(firstP_n + " ^" + secondP_n + " = " + result);
   }
   else if (answer_funct.toUpperCase() == "SQRT")
   {
     alert("<Selected> SQUARE ROOT");
     firstSQ_n = prompt("What Is Your First Number: ");
-    numSQ_n = Math.sqrt(Number(firstSQ_n));
-    alert(firstSQ_n + " SQUARE ROOT "+ " = " + numSQ_n);
+    result = Math.sqrt(Number(firstSQ_n));
+    alert(firstSQ_n + " SQUARE ROOT "+ " = " + result);
   }
 
   else if (answer_funct.toUpperCase() == "BMI")
@@ -52,8 +44,8 @@ if (answer_cal.toUpperCase() == "A")
       //80lb -> 36kilo
       height_b = prompt("What Is Your Height(INCH) Ensure Answer is Decimal: ");
 
-      result_b = (Number(weight_b)/(Number(height_b)*Number(height_b))) * 703;
-      alert("Your BMI(metric) Is: "+ result_b);
+    result = (Number(weight_b)/(Number(height_b)*Number(height_b))) * 703;
+      alert("Your BMI(metric) Is: "+ result);
     }
 
     else if (answer_Bmi.toUpperCase() == "MET")
@@ -61,8 +53,8 @@ if (answer_cal.toUpperCase() == "A")
       alert("<Selected> BMI Metric");
       weight_b = prompt("What Is Your Weight(kg): ");
       height_b = prompt("What Is Your Height(M): ");
-      result_b = (Number(weight_b)/(Number(height_b)*Number(height_b)));
-      alert("Your BMI(metric) Is: "+ result_b);
+      result = (Number(weight_b)/(Number(height_b)*Number(height_b)));
+      alert("Your BMI(metric) Is: "+ result);
     }
 
     else
@@ -88,16 +80,16 @@ else if (answer_cal.toUpperCase() == "B")
     alert("<Selected> ADDITION")
     first_n = prompt("What Is Your First Number: ");
     second_n = prompt("What Is Your Second Number: ");
-    add_n = Number(first_n) + Number(second_n);
-    alert(first_n + " + " + second_n + " = " + add_n);
+    result = Number(first_n) + Number(second_n);
+    alert(first_n + " + " + second_n + " = " + result);
   }
   else if (answer_funct.toUpperCase() == "SUB" || answer_cal == "-")
   {
     alert("<Selected> SUBTRACTION")
     first_n = prompt("What Is Your First Number: ");
     second_n = prompt("What Is Your Second Number: ");
-    sub_n = Number(first_n) - Number(second_n);
-    alert(first_n + " - " + second_n + " = " + sub_n);
+    result = Number(first_n) - Number(second_n);
+    alert(first_n + " - " + second_n + " = " + result);
   }
 
   else if (answer_funct.toUpperCase() == "MULTI" || answer_cal == "*")
@@ -105,8 +97,8 @@ else if (answer_cal.toUpperCase() == "B")
     alert("<Selected> MULTIPLICATION")
     first_n = prompt("What Is Your First Number: ");
     second_n = prompt("What Is Your Second Number: ");
-    multi_n = Number(first_n) * Number(second_n);
-    alert(first_n + " x " + second_n + " = " + multi_n);
+    result = Number(first_n) * Number(second_n);
+    alert(first_n + " x " + second_n + " = " + result);
   }
 
   else if (answer_funct.toUpperCase() == "DIV" || answer_cal == "/")
@@ -114,8 +106,8 @@ else if (answer_cal.toUpperCase() == "B")
     alert("<Selected> DIVISION")
     first_n = prompt("What Is Your First Number: ");
     second_n = prompt("What Is Your Second Number: ");
-    div_n = Number(first_n) / Number(second_n);
-    alert(first_n + " / " + second_n + " = " + div_n);
+    result = Number(first_n) / Number(second_n);
+    alert(first_n + " / " + second_n + " = " + result);
   }
 
   else
